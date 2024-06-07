@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  PortalEscolar:
+    image: portalescolar:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8130:8130"
+    environment:
+      - SPRING_DATA_MONGODB_URI:mongodb+srv://Johan:jsjf123@pc1-jsjf.bhruhbh.mongodb.net/portalescolar
